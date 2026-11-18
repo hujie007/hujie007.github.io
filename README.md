@@ -1,6 +1,6 @@
 # Jie Hu — Academic Website
 
-Source code for [Jie Hu's academic website](https://hujie007.github.io/). The site uses a sidebar profile and a main content column, with a home-page news feed and three research areas, each with its own publication list. It includes responsive layouts, readable typography, publication search, BibTeX downloads, and links to the CV and profile photo. The layout takes visual inspiration from Huiyuan Wang's academic website.
+Source code for [Jie Hu's academic website](https://hujie007.github.io/). The site uses a sidebar profile and a main content column, with a home-page news feed and three research areas, each with its own publication list. It includes responsive layouts, readable typography, publication search, BibTeX downloads, and links to the CV and profile photo.
 
 Content is maintained in Markdown and YAML. Routine updates do not require editing HTML or installing Ruby. Changes committed to `main` are built and published automatically through GitHub Actions.
 

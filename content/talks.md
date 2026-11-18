@@ -1,4 +1,3 @@
-Selected presentations and conference participation from my CV.
 
 ## 2026
 

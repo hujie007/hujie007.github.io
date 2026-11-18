@@ -1,0 +1,377 @@
+# Add or update papers here. Keep every id unique.
+# areas: transfer | federated | inference. Multiple values are allowed.
+- id: 1
+  title: Targeted Learning of Heterogeneous Sources by Informative Feature Sharing
+  authors: Jie Hu, Yudong Wang, Tingyin Wang, Yumou Qiu, Yang Ning, Yong Chen*
+  year: 2026
+  venue: 'Journal of the Royal Statistical Society: Series B'
+  status: Published & accepted
+  topic: Transfer learning
+  selected: true
+  url: null
+  code: https://github.com/Penncil/Targeted-IFS
+  detail: In press
+  areas:
+  - transfer
+- id: 2
+  title: Federated Feature Selection with False Discovery Rate Control
+  authors: Jie Hu, Jiayi Tong, Yang Ning, Cheng Yong Tang, Jason H. Moore, Runze Li*, Yong Chen*
+  year: 2026
+  venue: 'Journal of the Royal Statistical Society: Series B'
+  status: Published & accepted
+  topic: Federated learning
+  selected: true
+  url: https://doi.org/10.1093/jrsssb/qkaf074
+  code: https://github.com/Penncil/Fed-FDR
+  detail: 88(3), 978–997
+  areas:
+  - federated
+- id: 3
+  title: A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores
+  authors: Jie Hu†, Raelynn Chen†, Maxwell Salvatore, Olivia Wu, Okan Bilge Ozdemir, Yiwen Lu, Shawn Murphy, Elizebeth
+    W. Karlson, Atlas Khan, Krzysztof Kiryluk, Iftikhar S. Kullo, Johanna L. Smith, Eimear E. Kenny, Yuan Luo, Zaldy
+    S. Tan, William G. La Cava, Marylyn D. Ritchie, Yong Chen*, Ruowang Li*
+  year: 2026
+  venue: Nature Communications
+  status: Published & accepted
+  topic: Transfer learning
+  selected: true
+  url: https://doi.org/10.1038/s41467-026-77128-5
+  code: https://github.com/Cedars-CIG/ABPRS
+  detail: ''
+  areas:
+  - transfer
+- id: 4
+  title: 'CHIP: Cost-Efficient High-Dimensional Inference for Generalized Linear Models with Subsampling and One-Step
+    Polishing'
+  authors: Binyu Zhang†, Jie Hu†, Zhe Zhang†, Yumou Qiu, Yong Chen*
+  year: 2026
+  venue: The Annals of Applied Statistics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: true
+  url: null
+  code: null
+  detail: In press
+  areas:
+  - inference
+- id: 5
+  title: Signal lasso with NonConvex penalties for efficient network reconstruction in complex system
+  authors: Lei Shi*, Jie Hu, Huaiyu Tan, Libin Jin, Wei Zhong, Chen Shen
+  year: 2026
+  venue: The Annals of Applied Statistics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: https://doi.org/10.1214/26-AOAS2206
+  code: null
+  detail: ''
+  areas:
+  - inference
+- id: 6
+  title: 'DisC²o-HD: Distributed causal inference with covariates shift for analyzing real-world high-dimensional
+    data'
+  authors: Jiayi Tong†, Jie Hu†, George Hripcsak, Yang Ning, Yong Chen*
+  year: 2025
+  venue: Journal of Machine Learning Research
+  status: Published & accepted
+  topic: Federated learning
+  selected: true
+  url: https://www.jmlr.org/papers/v26/23-1254.html
+  code: null
+  detail: 26(3), 1–50
+  areas:
+  - federated
+- id: 7
+  title: Applied Regression Analysis of Correlations for Correlated Data
+  authors: Jie Hu, Yu Chen, Chenlei Leng, Cheng Yong Tang*
+  year: 2024
+  venue: The Annals of Applied Statistics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: 18(1), 184–198
+  areas:
+  - inference
+- id: 8
+  title: Joint Network Reconstruction and Community Detection from Rich but Noisy Data
+  authors: Jie Hu, Xiao Chen, Yu Chen*, Weiping Zhang
+  year: 2024
+  venue: Journal of Computational and Graphical Statistics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: 33(2), 501–514
+  areas:
+  - inference
+- id: 9
+  title: Fast Estimation for Large-Scale Data via Optimal Subsampling and One-Step Polishing
+  authors: Jie Hu†, Jianmin Chen†, Yiwen Lu, Yudong Wang, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Under revision
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: Minor revision
+  areas:
+  - inference
+- id: 10
+  title: Identifying Causal Effects of Multiple Treatments on Multiple Outcomes in the Presence of Unmeasured Confounding
+  authors: Wenjie Hu†, Jie Hu†, Yong Chen*
+  year: 2026
+  venue: ''
+  status: Under revision
+  topic: Causal inference
+  selected: false
+  url: null
+  code: null
+  detail: Invited revision
+  areas:
+  - inference
+- id: 11
+  title: Targeted Learning via Probabilistic Subpopulation Matching
+  authors: Xiaokang Liu†, Jie Hu†, Naiming Jing, Yang Ning, Cheng Yong Tang, Runze Li, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Under revision
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: Second-round revision
+  areas:
+  - transfer
+- id: 12
+  title: 'TARQET: Transfer- and Alignment-Refined Quantile Estimation for Multi-Site Data'
+  authors: Yifan Jiang†, Jie Hu†, Bingyu Zhang, David Asch, Runze Li, Yong Chen*
+  year: 2026
+  venue: ''
+  status: Under revision
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: Major revision
+  areas:
+  - transfer
+- id: 13
+  title: 'Beyond P-values: A Multi-Metric Framework for Robust Feature Selection and Predictive Modeling'
+  authors: Raelynn Chen, Attri Ghosh, Jie Hu, Yong Chen, Jason H. Moore, Ruowang Li*
+  year: 2025
+  venue: ''
+  status: Under revision
+  topic: Efficient inference
+  selected: false
+  url: https://doi.org/10.1101/2025.10.05.680380
+  code: null
+  detail: Minor revision
+  areas:
+  - inference
+- id: 14
+  title: 'Targeting Underrepresented Minorities: A Privacy-Preserving Transfer Learning Approach'
+  authors: Tingyin Wang, Jie Hu, Yudong Wang, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Under revision
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: Invited revision
+  areas:
+  - transfer
+- id: 15
+  title: 'Federated Target Trial Emulation for Time-to-Event Outcomes via POLARIS: Pooled-Equivalent One-Shot Likelihood
+    Aggregation for Real-World Inference in Survival'
+  authors: Tingyin Wang, Yuqing Lei, Lu Li, Yudong Wang, Huilin Tang, Siqi Chen, Bingyu Zhang, Yue Wu, Jie Hu, Huiyuan
+    Wang, Anastassia Amaro, Jingmei Qiu, Yiwen Lu, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Under revision
+  topic: Federated learning
+  selected: false
+  url: null
+  code: null
+  detail: Major revision
+  areas:
+  - federated
+- id: 16
+  title: 'The Shape of Care: Planning for Telemedicine Rollout under Heterogeneous Adoption'
+  authors: Jie Hu†, Yifan Jiang†, Yiwen Lu†, Runze Li*, Yong Chen*
+  year: 2026
+  venue: ''
+  status: Working papers
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - transfer
+- id: 17
+  title: 'FedEx: One-Shot Federated Low-Rank Adaptation via First-Order Extrapolation'
+  authors: Jie Hu, Tsaihor Chan, Yue Wu, Hui Zou, Yong Chen
+  year: 2026
+  venue: ''
+  status: Working papers
+  topic: Federated learning
+  selected: true
+  url: null
+  code: null
+  detail: Submitted
+  areas:
+  - federated
+- id: 18
+  title: Low-Complexity Adjustment for Transfer Learning in Nonparametric Regression
+  authors: Yue Wu, Jie Hu, Runze Li, Yong Chen*
+  year: 2026
+  venue: ''
+  status: Working papers
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - transfer
+- id: 19
+  title: 'TETRiS: TEnsor-Train Enabled Regulatory Post-Marketing Surveillance in Self-controlled Designs'
+  authors: Yiwen Lu, Yudong Wang, Huiyuan Wang, Jie Hu, Dazheng Zhang, Richard Forshee, Jingmei Qiu, Yun Lu, Yong
+    Chen*
+  year: 2026
+  venue: ''
+  status: Working papers
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - inference
+- id: 20
+  title: 'Conformal Mirror Statistics for Model Alignment: Uncertainty Quantification with FDR Control'
+  authors: Siqi Chen, Yishan Shen, Huiyuan Wang, Jie Hu*, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Working papers
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: Submitted
+  areas:
+  - inference
+- id: 21
+  title: On MM Algorithms for Decentralized Data
+  authors: Yudong Wang, Jie Hu, Xiaowu Dai, Raymond J. Carroll, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Working papers
+  topic: Federated learning
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - federated
+- id: 22
+  title: 'Decision-Specific AI for Health-System Digital Twins: From Prediction to Action'
+  authors: Yiwen Lu, Jiayi Tong, Haoyuan Wang, Jie Hu, Hongfang Liu, Rachel Werner, David Asch, Yong Chen*
+  year: 2026
+  venue: ''
+  status: Working papers
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - inference
+- id: 23
+  title: 'MOTTO: A Lossless Tensor-Train Framework for Multi-Site Time-to-Event Analysis of GLP-1 Receptor Agonists
+    and Psychiatric Outcomes'
+  authors: Siqi Chen, Yuqing Lei, Lu Li, Huilin Tang, Yudong Wang, Tingyin Wang, Bingyu Zhang, Yue Wu, Jie Hu, Qingyu
+    Chen, Huiyuan Wang, Anastassia Amaro, Yuan Lu, Jingmei Qiu, Yiwen Lu, Yong Chen*
+  year: 2025
+  venue: ''
+  status: Working papers
+  topic: Federated learning
+  selected: false
+  url: null
+  code: null
+  detail: Under review
+  areas:
+  - federated
+- id: 24
+  title: 'Penalized High-Dimensional M-Quantile Regression: From L1 to Lp Optimization'
+  authors: Jie Hu, Yu Chen, Weiping Zhang, Xiao Guo*
+  year: 2021
+  venue: Canadian Journal of Statistics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: null
+  code: null
+  detail: 49(3), 875–905
+  areas:
+  - inference
+- id: 25
+  title: Dynamic Panel Data Quantile Regression with Network-Linked Fixed Effects
+  authors: Shiwei Huang, Yu Chen*, Jie Hu, Weiping Zhang
+  year: 2026
+  venue: Journal of Econometrics
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: https://doi.org/10.1016/j.jeconom.2026.106188
+  code: null
+  detail: ''
+  areas:
+  - inference
+- id: 26
+  title: Estimation of Banded Time-Varying Precision Matrix Based on SCAD and Group Lasso
+  authors: Xiaonan Zhu, Yu Chen, Jie Hu*
+  year: 2024
+  venue: Computational Statistics & Data Analysis
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  url: https://doi.org/10.1016/j.csda.2023.107849
+  code: null
+  detail: 189, 107849
+  areas:
+  - inference
+- id: 27
+  title: 'Multitask Learning 1997–2024: Part II Regularization and Optimization'
+  authors: Xiaokang Liu, Jun Yu, Yutong Dai, Yishan Shen, Jianmin Chen, Jie Hu, Jin Huang, Yixin Liu, Yilong Yin,
+    Vinod Namboodiri, et al.
+  year: 2025
+  venue: Harvard Data Science Review
+  status: Published & accepted
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: 7(3)
+  areas:
+  - transfer
+- id: 28
+  title: 'Multitask Learning 1997–2024: Part I Fundamentals'
+  authors: Jun Yu, Xiaokang Liu, Chongliang Luo, Jin Huang, Rong Zhou, Yixin Liu, Jie Hu, Jianmin Chen, Ke Zhang,
+    Dazheng Zhang, et al.
+  year: 2025
+  venue: Harvard Data Science Review
+  status: Published & accepted
+  topic: Transfer learning
+  selected: false
+  url: null
+  code: null
+  detail: 7(3)
+  areas:
+  - transfer

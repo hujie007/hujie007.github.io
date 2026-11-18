@@ -1,0 +1,9 @@
+- name: Targeted-IFS
+  description: Targeted learning with informative feature sharing.
+  url: https://github.com/Penncil/Targeted-IFS
+- name: Fed-FDR
+  description: Federated feature selection with false discovery rate control.
+  url: https://github.com/Penncil/Fed-FDR
+- name: ABPRS
+  description: Adaptive boosting of pre-trained polygenic risk scores.
+  url: https://github.com/Cedars-CIG/ABPRS

@@ -1,0 +1,24 @@
+# Basic profile. Edit these values; GitHub Actions rebuilds the website after you save.
+name: Jie Hu
+degree: Ph.D.
+role: Research Associate
+affiliation: University of Pennsylvania
+department: Department of Biostatistics, Epidemiology and Informatics
+school: Perelman School of Medicine
+email: jie.hu@pennmedicine.upenn.edu
+location: Philadelphia, PA
+portrait: assets/img/jie-hu.jpg
+cv: assets/pdf/Jie_Hu_CV.pdf
+scholar: https://scholar.google.com/citations?user=065NguEAAAAJ&hl=en
+penn: https://dbei.med.upenn.edu/staff/jie-hu-phd/
+github: https://github.com/hujie007
+description: Jie Hu develops statistical and machine learning methods for heterogeneous and distributed data, with
+  applications in human health.
+accent_color: '#17385c'
+job_market: true
+job_market_title: On the academic job market · 2026–2027
+job_market_text: I am seeking a tenure-track faculty position in statistics, biostatistics, or data science.
+updated: November 2026
+degree_label: Ph.D. in Statistics
+home_lead: I develop statistical and machine learning methods for heterogeneous and distributed data, with applications
+  in human health.

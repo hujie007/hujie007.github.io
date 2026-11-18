@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page_title }}{% if section != 'home' %} | {{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}"><meta name="theme-color" content="{{ site.accent_color }}">
+<meta property="og:title" content="{{ page_title }} | {{ site.name }}"><meta property="og:description" content="{{ site.description }}">
+<link rel="icon" href="{{ url('assets/img/favicon.svg') }}" type="image/svg+xml"><link rel="stylesheet" href="{{ url('assets/css/jie-hu.css') }}">
+<style>:root{--accent:{{ site.accent_color }}}</style><script src="{{ url('assets/js/navigation.js') }}" defer></script>
+{% if has_papers %}<script src="{{ url('assets/js/publications.js') }}" defer></script>{% endif %}
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="site-nav" aria-label="Main navigation"><a class="site-name" href="{{ url('') }}">{{ site.name }}</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-links">Menu <span aria-hidden="true" class="menu-icon"></span></button><div class="navigation-links" id="navigation-links">{% for key,path,label in navigation %}<a href="{{ url(path) }}"{% if nav_section == key %} class="active" aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}</div></nav></header>
+<div class="site-layout"><aside class="profile-sidebar" aria-label="Profile"><a class="portrait-link" href="{{ url('') }}"><img class="portrait" src="{{ url(site.portrait) }}" width="295" height="307" alt="Portrait of {{ site.name }}"></a><div class="sidebar-copy"><p class="degree">{{ site.degree_label }}</p><p class="sidebar-role">{{ site.role }}</p><p class="sidebar-affiliation">{{ site.affiliation }}</p><p class="sidebar-department">{{ site.department }}<br>{{ site.school }}</p><p class="sidebar-location">{{ site.location }}</p><div class="sidebar-links"><a href="mailto:{{ site.email }}">Email</a><a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a><a href="{{ url(site.cv) }}" target="_blank" rel="noopener">Curriculum vitae</a>{% if site.github %}<a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}</div></div></aside>
+<main id="main" class="page-main{% if section == 'home' %} home-page{% endif %}">{% block main %}{% endblock %}</main></div>
+<footer class="site-footer"><div><span>© {{ year }} {{ site.name }}</span><span>Last updated: {{ site.updated }}</span></div></footer>
+</body></html>

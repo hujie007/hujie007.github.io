@@ -1,0 +1,19 @@
+# Research areas. Pages collect papers by the matching areas field in publications.yml.
+- slug: transfer
+  title: Adaptive Transfer Learning
+  summary: Targeted information sharing across heterogeneous populations.
+  keywords: High-dimensional transfer · Distribution alignment · Precision medicine
+  content: research-transfer.md
+  filter_label: Transfer learning
+- slug: federated
+  title: Federated & Distributed Learning
+  summary: Communication-efficient learning and inference without pooling individual-level data.
+  keywords: Federated inference · Causal learning · One-shot model adaptation
+  content: research-federated.md
+  filter_label: Federated learning
+- slug: inference
+  title: Efficient & Reliable Statistical Learning
+  summary: Scalable estimation and principled inference for complex and latent structures.
+  keywords: Subsampling · High-dimensional inference · Networks and latent structures
+  content: research-inference.md
+  filter_label: Efficient & reliable learning

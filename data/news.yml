@@ -1,7 +1,7 @@
 # Newest updates first. text supports Markdown. Use exact dates only when known.
 - date: Nov. 2026
   category: Accepted
-  title: Targeted-IFS accepted by Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)
+  title: "Targeted-IFS accepted by Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)"
   text: Our paper on informative feature sharing across heterogeneous sources is in press.
   url: publications/#paper-1
 - date: Oct. 2026
@@ -16,6 +16,6 @@
   url: https://doi.org/10.1038/s41467-026-77128-5
 - date: July 2026
   category: Published
-  title: Fed-FDR published in Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)
+  title: "Fed-FDR published in Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)"
   text: Federated feature selection with false discovery rate control.
   url: publications/#paper-2

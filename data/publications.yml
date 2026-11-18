@@ -221,7 +221,7 @@
   venue: ''
   status: Working papers
   topic: Federated learning
-  selected: true
+  selected: false
   url: null
   code: null
   detail: Submitted

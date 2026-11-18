@@ -62,7 +62,7 @@
   venue: The Annals of Applied Statistics
   status: Published & accepted
   topic: Efficient inference
-  selected: false
+  selected: true
   url: https://doi.org/10.1214/26-AOAS2206
   code: null
   detail: ''
@@ -89,7 +89,7 @@
   venue: The Annals of Applied Statistics
   status: Published & accepted
   topic: Efficient inference
-  selected: false
+  selected: true
   url: null
   code: null
   detail: 18(1), 184–198
@@ -102,7 +102,7 @@
   venue: Journal of Computational and Graphical Statistics
   status: Published & accepted
   topic: Efficient inference
-  selected: false
+  selected: true
   url: null
   code: null
   detail: 33(2), 501–514

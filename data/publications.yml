@@ -112,7 +112,7 @@
   title: Fast Estimation for Large-Scale Data via Optimal Subsampling and One-Step Polishing
   authors: Jie Hu†, Jianmin Chen†, Yiwen Lu, Yudong Wang, Yong Chen*
   year: 2025
-  venue: ''
+  venue: "INFORMS Journal on Computing (IJOC, UTD24)"
   status: Under revision
   topic: Efficient inference
   selected: false
@@ -125,7 +125,7 @@
   title: Identifying Causal Effects of Multiple Treatments on Multiple Outcomes in the Presence of Unmeasured Confounding
   authors: Wenjie Hu†, Jie Hu†, Yong Chen*
   year: 2026
-  venue: ''
+  venue: "Journal of the Royal Statistical Society: Series B (JRSSB)"
   status: Under revision
   topic: Causal inference
   selected: false
@@ -138,7 +138,7 @@
   title: Targeted Learning via Probabilistic Subpopulation Matching
   authors: Xiaokang Liu†, Jie Hu†, Naiming Jing, Yang Ning, Cheng Yong Tang, Runze Li, Yong Chen*
   year: 2025
-  venue: ''
+  venue: "Journal of the American Statistical Association, Applications & Case Studies (JASA)"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -151,7 +151,7 @@
   title: 'TARQET: Transfer- and Alignment-Refined Quantile Estimation for Multi-Site Data'
   authors: Yifan Jiang†, Jie Hu†, Bingyu Zhang, David Asch, Runze Li, Yong Chen*
   year: 2026
-  venue: ''
+  venue: "Journal of the American Statistical Association, Applications & Case Studies (JASA)"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -164,7 +164,7 @@
   title: 'Beyond P-values: A Multi-Metric Framework for Robust Feature Selection and Predictive Modeling'
   authors: Raelynn Chen, Attri Ghosh, Jie Hu, Yong Chen, Jason H. Moore, Ruowang Li*
   year: 2025
-  venue: ''
+  venue: "Patterns"
   status: Under revision
   topic: Efficient inference
   selected: false
@@ -177,7 +177,7 @@
   title: 'Targeting Underrepresented Minorities: A Privacy-Preserving Transfer Learning Approach'
   authors: Tingyin Wang, Jie Hu, Yudong Wang, Yong Chen*
   year: 2025
-  venue: ''
+  venue: "Journal of Machine Learning Research (JMLR)"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -192,7 +192,7 @@
   authors: Tingyin Wang, Yuqing Lei, Lu Li, Yudong Wang, Huilin Tang, Siqi Chen, Bingyu Zhang, Yue Wu, Jie Hu, Huiyuan
     Wang, Anastassia Amaro, Jingmei Qiu, Yiwen Lu, Yong Chen*
   year: 2025
-  venue: ''
+  venue: "npj Metabolic Health and Disease"
   status: Under revision
   topic: Federated learning
   selected: false

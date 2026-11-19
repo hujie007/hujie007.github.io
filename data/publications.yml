@@ -375,3 +375,95 @@
   detail: 7(3)
   areas:
   - transfer
+- id: 29
+  title: Robust and Efficient Network Reconstruction in Complex System via Adaptive Signal Lasso
+  authors: Lei Shi*, Jie Hu, Libin Jin, Chen Shen, Huaiyu Tan, Dalei Yu
+  year: 2023
+  venue: Physical Review Research
+  detail: 5(4), 043200
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 30
+  title: Estimation of High Conditional Tail Risk Based on Expectile Regression
+  authors: Jie Hu, Yu Chen*, Keqi Tan
+  year: 2021
+  venue: ASTIN Bulletin
+  detail: 51(2), 539–570
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 31
+  title: 'Learning Social Relationships: A Network Embedding-Based Approach for Community Detection via Cosine Similarity'
+  authors: Yu Chen, Lulu Cheng, Xiao Chen, Jie Hu*
+  year: 2026
+  venue: Statistics and Computing
+  detail: 36, 121
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 32
+  title: Community Detection and Network Reconstruction With Dependent Connectivity From Rich but Noisy Network
+    Data
+  authors: Shuyue Jin, Zhengtao Gui, Jie Hu, Yu Chen*
+  year: 2026
+  venue: Australian & New Zealand Journal of Statistics
+  detail: ''
+  url: https://doi.org/10.1111/anzs.70026
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 33
+  title: Block structure-based covariance tensor decomposition for group identification in matrix variables
+  authors: Yu Chen, Zongqing Hu, Jie Hu, Lei Shu*
+  year: 2025
+  venue: Statistics and Probability Letters
+  detail: 216, 110251
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 34
+  title: 'GBTM: Community Detection and Network Reconstruction for Noisy and Time-Evolving Data'
+  authors: Xiao Chen, Jie Hu, Yu Chen*
+  year: 2024
+  venue: Information Sciences
+  detail: 679, 121069
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference
+- id: 35
+  title: Too Connected to Fail? Evidence from a Chinese Financial Risk Spillover Network
+  authors: Yu Chen, Jie Hu, Weiping Zhang*
+  year: 2020
+  venue: China & World Economy
+  detail: 28(6), 78–100
+  url: null
+  status: Published & accepted
+  topic: Efficient inference
+  selected: false
+  code: null
+  areas:
+  - inference

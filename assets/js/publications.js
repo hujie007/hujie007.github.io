@@ -1,17 +1,14 @@
 const search = document.querySelector('#pub-search');
 if (search) {
-  let filter = 'all';
   const topic = document.querySelector('#topic');
   const articles = [...document.querySelectorAll('.publication')];
-  const buttons = [...document.querySelectorAll('.filter')];
   const reset = document.querySelector('#reset-filters');
   function applyFilters() {
     let count = 0;
     const query = search.value.toLowerCase().trim();
     for (const article of articles) {
-      const statusMatches = filter === 'all' || (filter === 'selected' ? article.dataset.selected === 'true' : article.dataset.status === filter);
       const topicMatches = topic.value === 'all' || article.dataset.areas.split(' ').includes(topic.value);
-      const visible = statusMatches && topicMatches && article.textContent.toLowerCase().includes(query);
+      const visible = topicMatches && article.textContent.toLowerCase().includes(query);
       article.hidden = !visible;
       if (visible) count++;
     }
@@ -20,19 +17,16 @@ if (search) {
     });
     document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
     document.querySelector('#empty-state').hidden = count > 0;
-    reset.hidden = filter === 'all' && topic.value === 'all' && !query;
+    reset.hidden = topic.value === 'all' && !query;
   }
-  buttons.forEach(button => button.addEventListener('click', () => {
-    filter = button.dataset.filter;
-    buttons.forEach(other => {
-      other.classList.toggle('active', other === button);
-      other.setAttribute('aria-pressed', String(other === button));
-    });
+  function clearFilters() {
+    search.value = '';
+    topic.value = 'all';
     applyFilters();
-  }));
+  }
   search.addEventListener('input', applyFilters);
   topic.addEventListener('change', applyFilters);
-  reset.addEventListener('click', () => { search.value = ''; topic.value = 'all'; buttons[0].click(); search.focus(); });
+  reset.addEventListener('click', () => { clearFilters(); search.focus(); });
   document.addEventListener('keydown', event => {
     if (event.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName) && !document.querySelector('dialog[open]')) {
       event.preventDefault(); search.focus();
@@ -40,11 +34,12 @@ if (search) {
   });
   function revealHash() {
     if (location.hash.startsWith('#paper-')) {
-      search.value = ''; topic.value = 'all'; buttons[0].click();
+      clearFilters();
       requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({block: 'start'}));
     }
   }
   window.addEventListener('hashchange', revealHash);
+  applyFilters();
   revealHash();
 }
 

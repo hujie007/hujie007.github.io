@@ -67,7 +67,7 @@ Add a complete entry to `data/publications.yml`. Each paper must have a unique i
 ```
 
 - `status` must be one of `Published & accepted`, `Under revision`, or `Working papers`.
-- `selected: true` includes the paper in the **Selected** filter on the Publications page.
+- For papers with `status: Published & accepted`, set `selected: true` to list them under **Selected Publications**, or `selected: false` to list them under **Other Publications**. Papers with the other statuses appear in **Under Revision** or **Working Papers**. The four sections and their counts update automatically.
 - `areas` determines which research pages include the paper. Use `transfer`, `federated`, or `inference`. For example, `areas: [transfer, federated]` includes it in both areas.
 - All three research publication lists are generated from the same data. Enter each paper once; paper counts update automatically.
 - `venue` is the journal or publication venue. Leave it empty when appropriate.
@@ -75,7 +75,7 @@ Add a complete entry to `data/publications.yml`. Each paper must have a unique i
 - `code` is the full URL of the code repository. Leave it empty if no code is available.
 - `pdf` can be a full PDF URL or a local path such as `assets/pdf/YourPaper.pdf`. Upload local PDFs to `assets/pdf/` first.
 - `detail` can contain information such as `In press`, `Minor revision`, or volume and page numbers.
-- `topic` can use an existing topic or a new one. Filters and publication counts update automatically.
+- `topic` can use an existing topic or a new one. Its label is included in publication searches.
 - List authors in their usual name order, separated by commas. Use `†` for equal first authorship and `*` for corresponding authorship. Jie Hu's name is bolded automatically.
 
 Use spaces for YAML indentation, not tabs. Put titles containing colons or other special characters in quotes. If a string contains a single quote, use double quotes around the full string.

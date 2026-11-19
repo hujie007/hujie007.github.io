@@ -1,5 +1,33 @@
-{% extends 'base.html' %}{% block main %}
-<h1>Publications</h1><p class="page-description">Papers on statistical learning, data integration, and inference.</p><p class="author-legend">† Equal contribution &nbsp; · &nbsp; * Corresponding author<br><a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a></p>
-<div class="pub-controls"><label class="search-label" for="pub-search">Search publications</label><div class="search-wrap">{{ search_icon|safe }}<input type="search" id="pub-search" placeholder="Search by title, author, or topic…" autocomplete="off"></div><div class="filters" role="group" aria-label="Filter publications"><button class="filter active" data-filter="all" aria-pressed="true">All <span>{{ papers|length }}</span></button><button class="filter" data-filter="selected" aria-pressed="false">Selected <span>{{ selected_count }}</span></button>{% for status in statuses %}<button class="filter" data-filter="{{ status }}" aria-pressed="false">{{ status }} <span>{{ status_counts[status] }}</span></button>{% endfor %}</div><div class="filter-bottom"><label for="topic">Research area</label><select id="topic"><option value="all">All research areas</option>{% for area in research %}<option value="{{ area.slug }}">{{ area.filter_label }}</option>{% endfor %}</select><span id="result-count" aria-live="polite">{{ papers|length }} papers</span><button class="reset-filters" id="reset-filters" hidden>Reset</button></div></div>
-<div id="publication-list" data-source="{{ url('assets/publications.json') }}">{% for status in statuses %}<section class="publication-group" data-group="{{ status }}"><h2>{{ status }}</h2>{% for p in papers if p.status == status %}{% include '_paper.html' %}{% endfor %}</section>{% endfor %}</div><p class="empty-state" id="empty-state" hidden>No papers match your search. Try another term or reset the filters.</p>{% include '_citations.html' %}
+{% extends 'base.html' %}
+{% block main %}
+{% set published_papers = papers|selectattr('status', 'equalto', 'Published & accepted')|list %}
+{% set publication_groups = [
+  ('selected', 'Selected Publications', published_papers|selectattr('selected')|list),
+  ('other', 'Other Publications', published_papers|rejectattr('selected')|list),
+  ('revision', 'Under Revision', papers|selectattr('status', 'equalto', 'Under revision')|list),
+  ('working', 'Working Papers', papers|selectattr('status', 'equalto', 'Working papers')|list)
+] %}
+<h1>Publications</h1>
+<p class="page-description">Papers on statistical learning, data integration, and inference.</p>
+<p class="author-legend">† Equal contribution &nbsp; · &nbsp; * Corresponding author<br><a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a></p>
+<div class="pub-controls">
+  <label class="search-label" for="pub-search">Search publications</label>
+  <div class="search-wrap">{{ search_icon|safe }}<input type="search" id="pub-search" placeholder="Search by title, author, or topic…" autocomplete="off"></div>
+  <div class="filter-bottom">
+    <label for="topic">Research area</label>
+    <select id="topic"><option value="all">All research areas</option>{% for area in research %}<option value="{{ area.slug }}">{{ area.filter_label }}</option>{% endfor %}</select>
+    <span id="result-count" aria-live="polite">{{ papers|length }} papers</span>
+    <button class="reset-filters" id="reset-filters" hidden>Reset</button>
+  </div>
+</div>
+<div id="publication-list" data-source="{{ url('assets/publications.json') }}">
+  {% for key, title, group_papers in publication_groups %}
+  <section class="publication-group" data-group="{{ key }}">
+    <h2>{{ title }} ({{ group_papers|length }})</h2>
+    {% for p in group_papers %}{% include '_paper.html' %}{% endfor %}
+  </section>
+  {% endfor %}
+</div>
+<p class="empty-state" id="empty-state" hidden>No papers match your search. Try another term or reset the filters.</p>
+{% include '_citations.html' %}
 {% endblock %}

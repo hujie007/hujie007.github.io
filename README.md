@@ -68,6 +68,7 @@ Add a complete entry to `data/publications.yml`. Each paper must have a unique i
 
 - `status` must be one of `Published & accepted`, `Under revision`, or `Working papers`.
 - For papers with `status: Published & accepted`, set `selected: true` to list them under **Selected Publications**, or `selected: false` to list them under **Other Publications**. Papers with the other statuses appear in **Under Revision** or **Working Papers**. The four sections and their counts update automatically.
+- Use the filter buttons to show **All**, **Selected Publications**, **Under Revision**, **Working Papers**, or **Other Publications**. Other Publications appears last in both the buttons and the full list.
 - `areas` determines which research pages include the paper. Use `transfer`, `federated`, or `inference`. For example, `areas: [transfer, federated]` includes it in both areas.
 - All three research publication lists are generated from the same data. Enter each paper once; paper counts update automatically.
 - `venue` is the journal or publication venue. Leave it empty when appropriate.

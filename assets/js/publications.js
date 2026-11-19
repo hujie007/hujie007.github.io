@@ -1,14 +1,17 @@
 const search = document.querySelector('#pub-search');
 if (search) {
+  let groupFilter = 'all';
   const topic = document.querySelector('#topic');
   const articles = [...document.querySelectorAll('.publication')];
+  const buttons = [...document.querySelectorAll('.filter')];
   const reset = document.querySelector('#reset-filters');
   function applyFilters() {
     let count = 0;
     const query = search.value.toLowerCase().trim();
     for (const article of articles) {
+      const groupMatches = groupFilter === 'all' || article.closest('.publication-group').dataset.group === groupFilter;
       const topicMatches = topic.value === 'all' || article.dataset.areas.split(' ').includes(topic.value);
-      const visible = topicMatches && article.textContent.toLowerCase().includes(query);
+      const visible = groupMatches && topicMatches && article.textContent.toLowerCase().includes(query);
       article.hidden = !visible;
       if (visible) count++;
     }
@@ -17,13 +20,23 @@ if (search) {
     });
     document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
     document.querySelector('#empty-state').hidden = count > 0;
-    reset.hidden = topic.value === 'all' && !query;
+    reset.hidden = groupFilter === 'all' && topic.value === 'all' && !query;
+  }
+  function selectGroup(value) {
+    groupFilter = value;
+    buttons.forEach(button => {
+      const active = button.dataset.filter === value;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    applyFilters();
   }
   function clearFilters() {
     search.value = '';
     topic.value = 'all';
-    applyFilters();
+    selectGroup('all');
   }
+  buttons.forEach(button => button.addEventListener('click', () => selectGroup(button.dataset.filter)));
   search.addEventListener('input', applyFilters);
   topic.addEventListener('change', applyFilters);
   reset.addEventListener('click', () => { clearFilters(); search.focus(); });

@@ -2,8 +2,9 @@
 """Build the academic website from Markdown and YAML; run from any directory."""
 from pathlib import Path
 from datetime import datetime
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 import argparse, html, json, re, shutil, sys
+import xml.etree.ElementTree as ET
 import yaml
 import markdown
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
@@ -24,6 +25,10 @@ def main():
     if args.output not in {'dist','_site'}:raise ValueError('Output must be dist or _site; source folders are protected.')
     out=ROOT/args.output
     site=load('site.yml')
+    site_url=site.get('site_url','').rstrip('/')
+    parsed_url=urlsplit(site_url)
+    if parsed_url.scheme!='https' or not parsed_url.netloc or parsed_url.query or parsed_url.fragment:raise ValueError('site.yml: site_url must be an absolute HTTPS website URL without a query or fragment.')
+    if not site.get('home_title'):raise ValueError('site.yml: home_title is required.')
     if not re.fullmatch(r'#[0-9a-fA-F]{6}',site.get('accent_color','')):raise ValueError('site.yml: accent_color must be a six-digit hex color.')
     for field in ['name','email','portrait','cv','description','updated']:
         if not site.get(field):raise ValueError(f'site.yml: {field} is required.')
@@ -71,6 +76,7 @@ def main():
     (out/'assets/publications.json').write_text(json.dumps(clean,ensure_ascii=False,indent=2),encoding='utf-8')
     env=Environment(loader=FileSystemLoader(ROOT/'templates'),autoescape=select_autoescape(['html']),undefined=StrictUndefined)
     common=dict(site=site,year=datetime.now().year,navigation=NAV,search_icon=SEARCH,papers=papers,selected_count=sum(p['selected'] for p in papers),statuses=STATUSES,status_counts={status:sum(p['status']==status for p in papers) for status in STATUSES},topics=list(dict.fromkeys(p['topic'] for p in papers)),news=news,research=areas,software=load('data/software.yml') or [])
+    canonical_urls=[]
     def render(path,section,title,template,content=None,**extra):
         depth=len(Path(path).parts) if path else 0
         prefix='../'*depth
@@ -79,7 +85,9 @@ def main():
             if target.startswith(('https://','http://','mailto:')):return target
             return prefix+target.lstrip('/') if target else prefix or './'
         folder=out/path;folder.mkdir(parents=True,exist_ok=True)
-        values=dict(common,section=section,nav_section='research' if section=='research-area' else section,page_title=title,url=url,content_html=md((ROOT/'content'/content).read_text(encoding='utf-8')) if content else '',has_papers=section in ['publications','research-area'])
+        canonical_url=site_url+'/'+(path.strip('/')+'/' if path else '')
+        canonical_urls.append(canonical_url)
+        values=dict(common,section=section,nav_section='research' if section=='research-area' else section,page_title=title,url=url,canonical_url=canonical_url,content_html=md((ROOT/'content'/content).read_text(encoding='utf-8')) if content else '',has_papers=section in ['publications','research-area'])
         values.update(extra)
         (folder/'index.html').write_text(env.get_template(template).render(**values),encoding='utf-8')
     render('','home',site['name'],'home.html','about.md')
@@ -87,6 +95,10 @@ def main():
     render('publications','publications','Publications','publications.html')
     for section,title,file in [('teaching','Teaching','teaching.md'),('talks','Talks','talks.md'),('service','Professional Service','service.md')]:render(section,section,title,'page.html',file)
     for area in areas:render('research/'+area['slug'],'research-area',area['title'],'research-area.html',area=area,page_papers=area['papers'])
+    sitemap=ET.Element('urlset',xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+    for canonical_url in canonical_urls:ET.SubElement(ET.SubElement(sitemap,'url'),'loc').text=canonical_url
+    ET.ElementTree(sitemap).write(out/'sitemap.xml',encoding='utf-8',xml_declaration=True)
+    (out/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {site_url}/sitemap.xml\n',encoding='utf-8')
     for section in ['research','publications','teaching','talks','service']:
         (out/f'{section}.html').write_text(f'<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url={section}/"><title>Redirecting</title></head><body><a href="{section}/">Continue</a><script>location.replace("{section}/"+location.hash)</script></body></html>',encoding='utf-8')
     (out/'.nojekyll').touch()

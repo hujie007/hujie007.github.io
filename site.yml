@@ -1,4 +1,7 @@
 # Basic profile. Edit these values; GitHub Actions rebuilds the website after you save.
+site_url: https://hujie007.github.io
+home_title: 'Jie Hu | Statistics & Machine Learning | University of Pennsylvania'
+google_site_verification: ''
 name: Jie Hu
 degree: Ph.D.
 role: Research Associate
@@ -12,8 +15,8 @@ cv: assets/pdf/Jie_Hu_CV.pdf
 scholar: https://scholar.google.com/citations?user=065NguEAAAAJ&hl=en
 penn: https://dbei.med.upenn.edu/staff/jie-hu-phd/
 github: https://github.com/hujie007
-description: Jie Hu develops statistical and machine learning methods for heterogeneous and distributed data, with
-  applications in human health.
+description: Jie Hu, Research Associate at the University of Pennsylvania, develops methods for high-dimensional
+  statistics, transfer learning, and federated inference.
 accent_color: '#17385c'
 job_market: true
 job_market_title: On the academic job market · 2026–2027

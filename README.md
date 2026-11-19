@@ -15,6 +15,7 @@ Content is maintained in Markdown and YAML. Routine updates do not require editi
 | Content to update | File |
 | --- | --- |
 | Name, position, email, affiliation, Scholar link, and job market notice | `site.yml` |
+| Website URL, search title, and Google Search Console verification | `site.yml` |
 | Home-page biography | `content/about.md` |
 | Research overview | `content/research.md` |
 | Titles, summaries, and keywords for the three research areas | `data/research.yml` |
@@ -101,3 +102,5 @@ Add new entries at the top of `data/news.yml`. Include `category`, `title`, `tex
 - **Accent color:** Change `accent_color` to a six-digit hex color such as `'#416b91'`. Keep the quotes and `#`.
 - **Last updated date:** Edit `updated` in `site.yml`, for example, `'January 2027'`.
 - **GitHub profile:** Edit or clear the `github` value in `site.yml`. It currently points to `https://github.com/hujie007`.
+- **Search settings:** `site_url` is the public website address, `home_title` is the home-page search title, and `description` is the search description. Each build generates `sitemap.xml`, `robots.txt`, and canonical page URLs.
+- **Google Search Console:** Add `https://hujie007.github.io/` as a URL-prefix property and choose HTML tag verification. Copy only the tag's `content` value into `google_site_verification` in `site.yml`. After deployment, complete verification in Search Console, submit `https://hujie007.github.io/sitemap.xml`, and request indexing of the homepage.

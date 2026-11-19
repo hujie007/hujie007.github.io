@@ -1,8 +1,13 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{ page_title }}{% if section != 'home' %} | {{ site.name }}{% endif %}</title>
+{% set search_title = site.home_title if section == 'home' else page_title ~ ' | ' ~ site.name %}
+<title>{{ search_title }}</title>
 <meta name="description" content="{{ site.description }}"><meta name="theme-color" content="{{ site.accent_color }}">
-<meta property="og:title" content="{{ page_title }} | {{ site.name }}"><meta property="og:description" content="{{ site.description }}">
+<meta name="author" content="{{ site.name }}"><link rel="canonical" href="{{ canonical_url }}">
+<meta property="og:title" content="{{ search_title }}"><meta property="og:description" content="{{ site.description }}">
+<meta property="og:type" content="website"><meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ site.site_url.rstrip('/') }}/{{ site.portrait.lstrip('/') }}"><meta property="og:image:alt" content="Portrait of {{ site.name }}">
+{% if site.get('google_site_verification') %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
 <link rel="icon" href="{{ url('assets/img/favicon.svg') }}" type="image/svg+xml"><link rel="stylesheet" href="{{ url('assets/css/jie-hu.css') }}">
 <style>:root{--accent:{{ site.accent_color }}}</style><script src="{{ url('assets/js/navigation.js') }}" defer></script>
 {% if has_papers %}<script src="{{ url('assets/js/publications.js') }}" defer></script>{% endif %}

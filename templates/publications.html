@@ -29,7 +29,7 @@
 <div id="publication-list" data-source="{{ url('assets/publications.json') }}">
   {% for key, title, group_papers in publication_groups %}
   <section class="publication-group" data-group="{{ key }}">
-    <h2>{{ title }} ({{ group_papers|length }})</h2>
+    <h2>{{ title }}</h2>
     {% for p in group_papers %}{% include '_paper.html' %}{% endfor %}
   </section>
   {% endfor %}

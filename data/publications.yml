@@ -112,7 +112,7 @@
   title: Fast Estimation for Large-Scale Data via Optimal Subsampling and One-Step Polishing
   authors: Jie Hu†, Jianmin Chen†, Yiwen Lu, Yudong Wang, Yong Chen*
   year: 2025
-  venue: "INFORMS Journal on Computing (IJOC, UTD24)"
+  venue: "INFORMS Journal on Computing"
   status: Under revision
   topic: Efficient inference
   selected: false
@@ -125,7 +125,7 @@
   title: Identifying Causal Effects of Multiple Treatments on Multiple Outcomes in the Presence of Unmeasured Confounding
   authors: Wenjie Hu†, Jie Hu†, Yong Chen*
   year: 2026
-  venue: "Journal of the Royal Statistical Society: Series B (JRSSB)"
+  venue: "Journal of the Royal Statistical Society: Series B"
   status: Under revision
   topic: Causal inference
   selected: false
@@ -138,7 +138,7 @@
   title: Targeted Learning via Probabilistic Subpopulation Matching
   authors: Xiaokang Liu†, Jie Hu†, Naiming Jing, Yang Ning, Cheng Yong Tang, Runze Li, Yong Chen*
   year: 2025
-  venue: "Journal of the American Statistical Association, Applications & Case Studies (JASA)"
+  venue: "Journal of the American Statistical Association, Applications & Case Studies"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -151,7 +151,7 @@
   title: 'TARQET: Transfer- and Alignment-Refined Quantile Estimation for Multi-Site Data'
   authors: Yifan Jiang†, Jie Hu†, Bingyu Zhang, David Asch, Runze Li, Yong Chen*
   year: 2026
-  venue: "Journal of the American Statistical Association, Applications & Case Studies (JASA)"
+  venue: "Journal of the American Statistical Association, Applications & Case Studies"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -177,7 +177,7 @@
   title: 'Targeting Underrepresented Minorities: A Privacy-Preserving Transfer Learning Approach'
   authors: Tingyin Wang, Jie Hu, Yudong Wang, Yong Chen*
   year: 2025
-  venue: "Journal of Machine Learning Research (JMLR)"
+  venue: "Journal of Machine Learning Research"
   status: Under revision
   topic: Transfer learning
   selected: false
@@ -328,7 +328,7 @@
   venue: Journal of Econometrics
   status: Published & accepted
   topic: Efficient inference
-  selected: false
+  selected: true
   url: https://doi.org/10.1016/j.jeconom.2026.106188
   code: null
   detail: ''

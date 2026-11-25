@@ -3,7 +3,7 @@
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import quote, urlsplit
-import argparse, html, json, re, shutil, sys
+import argparse, hashlib, html, json, re, shutil, sys
 import xml.etree.ElementTree as ET
 import yaml
 import markdown
@@ -75,7 +75,7 @@ def main():
     clean=[{key:value for key,value in paper.items() if key not in ['authors_html','scholar_url']} for paper in papers]
     (out/'assets/publications.json').write_text(json.dumps(clean,ensure_ascii=False,indent=2),encoding='utf-8')
     env=Environment(loader=FileSystemLoader(ROOT/'templates'),autoescape=select_autoescape(['html']),undefined=StrictUndefined)
-    common=dict(site=site,year=datetime.now().year,navigation=NAV,search_icon=SEARCH,papers=papers,selected_count=sum(p['selected'] for p in papers),statuses=STATUSES,status_counts={status:sum(p['status']==status for p in papers) for status in STATUSES},topics=list(dict.fromkeys(p['topic'] for p in papers)),news=news,research=areas,software=load('data/software.yml') or [])
+    common=dict(site=site,css_version=hashlib.sha256((ROOT/'assets/css/jie-hu.css').read_bytes()).hexdigest()[:12],year=datetime.now().year,navigation=NAV,search_icon=SEARCH,papers=papers,selected_count=sum(p['selected'] for p in papers),statuses=STATUSES,status_counts={status:sum(p['status']==status for p in papers) for status in STATUSES},topics=list(dict.fromkeys(p['topic'] for p in papers)),news=news,research=areas,software=load('data/software.yml') or [])
     canonical_urls=[]
     def render(path,section,title,template,content=None,**extra):
         depth=len(Path(path).parts) if path else 0

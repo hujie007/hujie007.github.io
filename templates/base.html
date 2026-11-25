@@ -8,7 +8,7 @@
 <meta property="og:type" content="website"><meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ site.site_url.rstrip('/') }}/{{ site.portrait.lstrip('/') }}"><meta property="og:image:alt" content="Portrait of {{ site.name }}">
 {% if site.get('google_site_verification') %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
-<link rel="icon" href="{{ url('assets/img/favicon.svg') }}" type="image/svg+xml"><link rel="stylesheet" href="{{ url('assets/css/jie-hu.css') }}">
+<link rel="icon" href="{{ url('assets/img/favicon.svg') }}" type="image/svg+xml"><link rel="stylesheet" href="{{ url('assets/css/jie-hu.css') }}?v={{ css_version }}">
 <style>:root{--accent:{{ site.accent_color }}}</style><script src="{{ url('assets/js/navigation.js') }}" defer></script>
 {% if has_papers %}<script src="{{ url('assets/js/publications.js') }}" defer></script>{% endif %}
 </head><body>

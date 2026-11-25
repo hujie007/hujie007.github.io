@@ -25,3 +25,14 @@ updated: November 2026
 degree_label: Ph.D. in Statistics
 home_lead: I develop statistical and machine learning methods for heterogeneous and distributed data, with applications
   in human health.
+
+# Journal abbreviations used in the CV.
+journal_abbreviations:
+  "Journal of the Royal Statistical Society: Series B": JRSSB
+  "The Annals of Applied Statistics": AOAS
+  "Journal of Econometrics": JOE
+  "Journal of Machine Learning Research": JMLR
+  "Journal of Computational and Graphical Statistics": JCGS
+  "INFORMS Journal on Computing": IJOC
+  "Journal of the American Statistical Association, Applications & Case Studies": JASA
+  "Journal of the American Statistical Association": JASA

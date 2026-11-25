@@ -73,6 +73,7 @@ Add a complete entry to `data/publications.yml`. Each paper must have a unique i
 - `areas` determines which research pages include the paper. Use `transfer`, `federated`, or `inference`. For example, `areas: [transfer, federated]` includes it in both areas.
 - All three research publication lists are generated from the same data. Enter each paper once; paper counts update automatically.
 - `venue` is the journal or publication venue. Leave it empty when appropriate.
+- Journal abbreviations are defined in `site.yml` under `journal_abbreviations` and appear as colored labels after the full journal name. Add a full-name-to-abbreviation entry there for a new journal, or set `venue_abbr` on an individual paper to override it.
 - `url` is the full `https://...` link to the article, DOI, or arXiv page.
 - `code` is the full URL of the code repository. Leave it empty if no code is available.
 - `pdf` can be a full PDF URL or a local path such as `assets/pdf/YourPaper.pdf`. Upload local PDFs to `assets/pdf/` first.

@@ -13,3 +13,5 @@
 .journal-abbr{display:inline-block;padding:0 .3em;border-radius:3px;background:#faeff3;color:#8a264b;font-weight:650;white-space:nowrap}
 /* Homepage contact details follow the news section. */
 .home-contact{margin-top:36px}.contact-details{border-top:1px solid var(--rule);padding-top:18px}.home-contact .contact-line{margin:0 0 12px}.home-contact .market-note{margin:0}
+/* Make links in the homepage biography easy to identify. */
+.biography a{color:#8a264b;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.biography a:hover{color:#641834;text-decoration-thickness:2px}

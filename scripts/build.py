@@ -89,7 +89,7 @@ def main():
         values=dict(common,section=section,nav_section='research' if section=='research-area' else section,page_title=title,url=url,canonical_url=canonical_url,content_html=md((ROOT/'content'/content).read_text(encoding='utf-8')) if content else '',has_papers=section in ['publications','research-area'])
         values.update(extra)
         (folder/'index.html').write_text(env.get_template(template).render(**values),encoding='utf-8')
-    render('','home',site['name'],'home.html','about.md')
+    render('','home',site['name'],'home.html','about.md',research_interests_html=md((ROOT/'content/research-interests.md').read_text(encoding='utf-8')))
     render('research','research','Research','research.html','research.md')
     render('publications','publications','Publications','publications.html')
     for section,title,file in [('teaching','Teaching','teaching.md'),('talks','Talks','talks.md'),('service','Professional Service','service.md')]:render(section,section,title,'page.html',file)

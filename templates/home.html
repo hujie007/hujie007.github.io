@@ -7,6 +7,10 @@
     {% for item in news %}<li><time>{{ item.date }}</time><div class="news-headline"><span class="news-category">{{ item.category }}</span>{% if item.url %}<a href="{{ url(item.url) }}">{{ item.title }}</a>{% else %}<strong>{{ item.title }}</strong>{% endif %}{% if item.get('journal') %}<span class="news-outlet"> — <em>{{ item.journal }}</em></span>{% endif %}</div></li>{% endfor %}
   </ol>
 </section>
+<section class="home-research" aria-labelledby="research-interests-heading">
+  <div class="section-heading"><h2 id="research-interests-heading">My current research interests include:</h2></div>
+  <div class="prose research-interests">{{ research_interests_html|safe }}</div>
+</section>
 <section class="home-contact" aria-labelledby="contact-heading">
   <div class="section-heading"><h2 id="contact-heading">Contact</h2></div>
   <div class="contact-details">

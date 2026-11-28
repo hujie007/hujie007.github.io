@@ -17,3 +17,5 @@
 .biography a{color:#3aa6c9;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.biography a:hover{color:#2785a5;text-decoration-thickness:2px}
 /* Compact news: paper title, status label, and abbreviated journal. */
 .news-list>li{padding:12px 0}.news-headline{line-height:1.65}.news-headline a{color:#3aa6c9;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.news-headline a:hover{color:#2785a5}.news-outlet{white-space:nowrap}.news-outlet em{font-weight:600}
+/* Homepage research interests sit between News and Contact. */
+.home-research{margin-top:36px}.research-interests{border-top:1px solid var(--rule);padding-top:16px}.research-interests ul{margin:0;padding-left:24px}.research-interests li{margin-bottom:10px}.research-interests li:last-child{margin-bottom:0}

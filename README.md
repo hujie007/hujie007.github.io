@@ -17,6 +17,7 @@ Content is maintained in Markdown and YAML. Routine updates do not require editi
 | Name, position, email, affiliation, Scholar link, and job market notice | `site.yml` |
 | Website URL, search title, and Google Search Console verification | `site.yml` |
 | Home-page biography | `content/about.md` |
+| Home-page research interests | `content/research-interests.md` |
 | Research overview | `content/research.md` |
 | Titles, summaries, and keywords for the three research areas | `data/research.yml` |
 | Adaptive Transfer Learning introduction | `content/research-transfer.md` |

@@ -2,4 +2,4 @@
 
 - **Federated and distributed learning:** Developing communication-efficient methods for estimation, inference, and parameter-efficient adaptation of AI foundation models without sharing individual-level data.
 
-- **Efficient and reliable statistical learning:** Designing scalable methods for high-dimensional data and latent structures, with interests in uncertainty quantification, generative modeling, and causal inference.
+- **Efficient and reliable statistical learning:** Designing scalable methods for high-dimensional data and latent structures, with interests in  generative modeling and causal inference.

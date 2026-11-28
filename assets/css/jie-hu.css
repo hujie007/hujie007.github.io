@@ -11,3 +11,5 @@
 @media(max-width:820px){.site-name{flex:0 0 auto}}
 /* Journal abbreviations follow the CV and stand out from venue details. */
 .journal-abbr{display:inline-block;padding:0 .3em;border-radius:3px;background:#faeff3;color:#8a264b;font-weight:650;white-space:nowrap}
+/* Homepage contact details follow the news section. */
+.home-contact{margin-top:36px}.contact-details{border-top:1px solid var(--rule);padding-top:18px}.home-contact .contact-line{margin:0 0 12px}.home-contact .market-note{margin:0}

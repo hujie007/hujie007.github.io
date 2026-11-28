@@ -1,5 +1,12 @@
 {% extends 'base.html' %}{% block main %}
 <h1>{{ site.name }}</h1>
-<section class="home-intro" aria-label="Introduction"><div class="prose biography">{{ content_html|safe }}</div><p class="contact-line"><strong>Contact:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% if site.job_market %}<p class="market-note"><strong>{{ site.job_market_title }}</strong><br>{{ site.job_market_text }}</p>{% endif %}<nav class="home-links" aria-label="Profile resources"><a href="{{ url('research/') }}">Research</a><a href="{{ url('publications/') }}">Publications</a><a href="{{ url(site.cv) }}" target="_blank" rel="noopener">CV (PDF)</a><a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a><a href="{{ site.penn }}" target="_blank" rel="noopener">Penn profile</a></nav></section>
+<section class="home-intro" aria-label="Introduction"><div class="prose biography">{{ content_html|safe }}</div></section>
 <section class="home-news" aria-labelledby="news-heading"><div class="section-heading"><h2 id="news-heading">News</h2><span>Selected updates</span></div><ol class="news-list">{% for item in news %}<li><time>{{ item.date }}</time><div><div class="news-headline"><span class="news-category">{{ item.category }}</span>{% if item.url %}<a href="{{ url(item.url) }}">{{ item.title }}</a>{% else %}<strong>{{ item.title }}</strong>{% endif %}</div><div class="news-description">{{ item.html|safe }}</div></div></li>{% endfor %}</ol></section>
+<section class="home-contact" aria-labelledby="contact-heading">
+  <div class="section-heading"><h2 id="contact-heading">Contact</h2></div>
+  <div class="contact-details">
+    <p class="contact-line"><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    {% if site.job_market %}<p class="market-note"><strong>{{ site.job_market_title }}</strong><br>{{ site.job_market_text }}</p>{% endif %}
+  </div>
+</section>
 {% endblock %}

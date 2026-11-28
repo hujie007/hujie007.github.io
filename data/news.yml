@@ -1,21 +1,22 @@
-# Newest updates first. text supports Markdown. Use exact dates only when known.
+# Newest updates first. Use the full paper title and an abbreviated journal.
 - date: Nov. 2026
   category: Accepted
-  title: "Targeted-IFS accepted by Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)"
-  text: Our paper on informative feature sharing across heterogeneous sources is in press.
+  title: Targeted Learning of Heterogeneous Sources by Informative Feature Sharing
+  journal: JRSSB
   url: publications/#paper-1
 - date: Oct. 2026
   category: Accepted
-  title: CHIP accepted by The Annals of Applied Statistics (AOAS)
-  text: Cost-efficient high-dimensional inference using subsampling and one-step polishing.
+  title: 'CHIP: Cost-Efficient High-Dimensional Inference for Generalized Linear Models with Subsampling and One-Step
+    Polishing'
+  journal: AOAS
   url: publications/#paper-4
 - date: Sep. 2026
   category: Published
-  title: AB-PRS published in Nature Communications
-  text: A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores.
+  title: A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores
+  journal: Nat. Commun.
   url: https://doi.org/10.1038/s41467-026-77128-5
 - date: July 2026
   category: Published
-  title: "Fed-FDR published in Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB)"
-  text: Federated feature selection with false discovery rate control.
+  title: Federated Feature Selection with False Discovery Rate Control
+  journal: JRSSB
   url: publications/#paper-2

@@ -85,13 +85,13 @@ Use spaces for YAML indentation, not tabs. Put titles containing colons or other
 
 ## Updating News
 
-Add new entries at the top of `data/news.yml`. Include `category`, `title`, `text`, and `url`; set `url` to `''` if no link is needed. The `text` field supports Markdown, including bold text, italics, and links.
+Add new entries at the top of `data/news.yml`. Include `date`, `category` (`Accepted` or `Published`), the paper's full `title`, the abbreviated `journal`, and `url`. Set `url` to `''` if no link is needed. Each update displays one compact headline; no description is shown.
 
 ```yaml
 - date: 'Jan. 2027'
   category: 'Accepted'
-  title: 'Paper title accepted by Journal Name'
-  text: 'A brief description of the work.'
+  title: 'Your paper title'
+  journal: 'JRSSB'
   url: 'publications/#paper-29'
 ```
 

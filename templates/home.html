@@ -1,7 +1,12 @@
 {% extends 'base.html' %}{% block main %}
 <h1>{{ site.name }}</h1>
 <section class="home-intro" aria-label="Introduction"><div class="prose biography">{{ content_html|safe }}</div></section>
-<section class="home-news" aria-labelledby="news-heading"><div class="section-heading"><h2 id="news-heading">News</h2><span>Selected updates</span></div><ol class="news-list">{% for item in news %}<li><time>{{ item.date }}</time><div><div class="news-headline"><span class="news-category">{{ item.category }}</span>{% if item.url %}<a href="{{ url(item.url) }}">{{ item.title }}</a>{% else %}<strong>{{ item.title }}</strong>{% endif %}</div><div class="news-description">{{ item.html|safe }}</div></div></li>{% endfor %}</ol></section>
+<section class="home-news" aria-labelledby="news-heading">
+  <div class="section-heading"><h2 id="news-heading">News</h2><span>Selected updates</span></div>
+  <ol class="news-list">
+    {% for item in news %}<li><time>{{ item.date }}</time><div class="news-headline"><span class="news-category">{{ item.category }}</span>{% if item.url %}<a href="{{ url(item.url) }}">{{ item.title }}</a>{% else %}<strong>{{ item.title }}</strong>{% endif %}{% if item.get('journal') %}<span class="news-outlet"> — <em>{{ item.journal }}</em></span>{% endif %}</div></li>{% endfor %}
+  </ol>
+</section>
 <section class="home-contact" aria-labelledby="contact-heading">
   <div class="section-heading"><h2 id="contact-heading">Contact</h2></div>
   <div class="contact-details">

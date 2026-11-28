@@ -67,7 +67,6 @@ def main():
     papers.sort(key=lambda paper:(STATUSES.index(paper['status']),-paper['year']))
     for area in areas:area['papers']=[paper for paper in papers if area['slug'] in paper['areas']]
     news=load('data/news.yml') or []
-    for item in news:item['html']=md(item['text'])
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
     shutil.copytree(ROOT/'assets',out/'assets')

@@ -15,3 +15,5 @@
 .home-contact{margin-top:36px}.contact-details{border-top:1px solid var(--rule);padding-top:18px}.home-contact .contact-line{margin:0 0 12px}.home-contact .market-note{margin:0}
 /* Make links in the homepage biography easy to identify. */
 .biography a{color:#3aa6c9;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.biography a:hover{color:#2785a5;text-decoration-thickness:2px}
+/* Compact news: paper title, status label, and abbreviated journal. */
+.news-list>li{padding:12px 0}.news-headline{line-height:1.65}.news-headline a{color:#3aa6c9;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.news-headline a:hover{color:#2785a5}.news-outlet{white-space:nowrap}.news-outlet em{font-weight:600}
